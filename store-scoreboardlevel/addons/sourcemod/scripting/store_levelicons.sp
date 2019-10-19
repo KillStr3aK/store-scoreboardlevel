@@ -37,6 +37,11 @@ public void OnPluginStart()
 	m_iOffset = FindSendPropInfo("CCSPlayerResource", "m_nPersonaDataPublicLevel");
 }
 
+public void OnClientPostAdminCheck(int client)
+{
+	m_iLevel[client] = -1;
+}
+
 public void LevelIconMapStart() 
 {
 	char sBuffer[PLATFORM_MAX_PATH];
