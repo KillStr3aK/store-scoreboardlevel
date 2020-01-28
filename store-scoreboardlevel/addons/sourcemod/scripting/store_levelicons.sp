@@ -39,11 +39,9 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 	return APLRes_Success;
 }
 
-public Native_GetLevel(Handle:plugin, params)
+public Native_GetLevel(Handle plugin, int params)
 {
-	int client = GetNativeCell(1);
-	
-	return m_iLevel[client];
+	return m_iLevel[GetNativeCell(1)];
 }
 
 public void OnPluginStart()
